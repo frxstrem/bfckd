@@ -5,34 +5,7 @@
  *
  * Written by Fredrik Østrem <frx.apps@gmail.com>
  *
- * -------------------------------- INSTRUCTIONS ---------------------------------
- *
- * Building with GCC:
- *   g++ ./bfckd.cpp -o bfckd
- *
- * Additional options for GCC:
- *   -DTAPE_SIZE=<n>                    Let the Brainfuck tape wrap around after
- *                                      <n> cells. Default: 65536.
- *   -DDEBUG_ENABLE=<d>                 Enable (<d> is non-zero) or disable
- *                                      (<d> is zero) the debug character '#'.
- *                                      Default: 0 (disabled).
- *   -DDEBUG_WIDTH=<n>                  Show <n> cells to the left and right of
- *                                      the current cell when printing debug
- *                                      information with '#'. Default: 2.
- *
- * Running:
- *   The program expects as input a Brianfuck program and this program's input,
- *   separated by '!'. For instance, the following runs the program ,[.[-],] on
- *   the input "Hello World":
- *      ,[.[-],]!Hello World
- *
- *   The Brainfuck interpreter uses 8-bit cells that can store values in the range
- *   0-255, and uses a wrapping tape that by default contains 65536 cells. The
- *   input operator will leave the cell unchanged on end-of-file; therefore, it is
- *   recommended that a program should for instance clear the current cell before
- *   reading, so that the value 0 can be interpreted as "end-of-file".
- *
- * ----------------------------------- LICENSE -----------------------------------
+ * -------------------------------------------------------------------------------
  *
  * The MIT License (MIT)
  *
