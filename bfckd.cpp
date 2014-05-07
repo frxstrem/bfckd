@@ -61,8 +61,21 @@ int main() {
     // Read Brainfuck code until '!' is found
     char ch;
     while(cin >> ch && ch != '!') {
-        if(ch == '+' || ch == '-' || ch == '<' || ch == '>' || ch == '[' || ch == ']' || ch == '.' || ch == ',' || ch == '#')
+        switch(ch) {
+        case '+':
+        case '-':
+        case '<':
+        case '>':
+        case '[':
+        case ']':
+        case '.':
+        case ',':
+#if DEBUG_ENABLE
+        case '#':
+#endif // DEBUG_ENABLE
             code.push_back(ch);
+            break;
+        }
     }
 
     // Run Brainfuck code
